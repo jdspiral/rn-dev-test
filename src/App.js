@@ -71,6 +71,7 @@ class Inploi extends Component {
                 title={"Job Role: " + job.role}
                 image={{ uri: image + job.employer_img }}
                 fontFamily="AvenirNext-Regular"
+                containerStyle={{ borderRadius: 3 }}
             >
                 <Text
                     style={styles.row}
