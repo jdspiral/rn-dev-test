@@ -50,7 +50,12 @@ class JobDeck extends Component {
         Animated.timing(this.position, {
             toValue: { x, y: 0 },
             duration: SWIPE_OUT_DURATION
-        });
+        }).start(() => this.onSwipeComplete());
+    }
+
+    onSwipeComplete() {
+        this.position.setValue({ x: 0, y: 0});
+        this.setState({ index: this.state.index + 1 })
     }
 
     resetPosition() {
