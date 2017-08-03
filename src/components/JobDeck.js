@@ -81,13 +81,14 @@ class JobDeck extends Component {
             if( i < this.state.index) { return null; }
 
             if(i === this.state.index) {
-                return (<Animated.View
+                return (
+                    <Animated.View
                         key={item.id}
-                    style={[this.getCardStyle(), styles.cardStyle]}
-                    {...this.panResponder.panHandlers}
+                        style={[this.getCardStyle(), styles.cardStyle]}
+                        {...this.panResponder.panHandlers}
                     >
-                    {this.props.renderCard(item)}
-                </Animated.View>
+                        {this.props.renderCard(item)}
+                    </Animated.View>
                 );
             }
 
